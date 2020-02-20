@@ -10,6 +10,12 @@ describe('First Name Validation',function(){
     it('given first name is null should return false',function(){
         assert.equal(false,userReg.firstNameReg(null));
     }),
+    it('given first name is empty should return false',function(){
+        assert.equal(false,userReg.firstNameReg(""));
+    }),
+    it('given first name is undefined should return false',function(){
+        assert.equal(false,userReg.firstNameReg(undefined));
+    }),
     it('given first name is correct',function(){
         assert.equal(true,userReg.firstNameReg("Pranali"));
     }),
@@ -44,6 +50,12 @@ describe('Last Name Validation',function(){
     it('given last name is null should return false',function(){
         assert.equal(false,userReg.lastNameReg(null));
     }),
+    it('given last name is empty should return false',function(){
+        assert.equal(false,userReg.lastNameReg(""));
+    }),
+    it('given last name is undefined should return false',function(){
+        assert.equal(false,userReg.lastNameReg(undefined));
+    }),
     it('given last name is correct',function(){
         assert.equal(true,userReg.lastNameReg("Pranali"));
     }),
@@ -77,6 +89,12 @@ describe('Email Validation',function(){
     it('given email is null should return false',function(){
         assert.equal(false,userReg.emailRegistration(null));
     }),
+    it('given email is empty should return false',function(){
+        assert.equal(false,userReg.emailRegistration(""));
+    }),
+    it('given email is undefined should return false',function(){
+        assert.equal(false,userReg.emailRegistration(undefined));
+    }),
     it('given email is correct',function(){
         assert.equal(true,userReg.emailRegistration("pranali.lembhe77@gmail.com"));
     }),
@@ -97,6 +115,12 @@ describe('Password Validation',function(){
     }),
     it('given password name is null should return false',function(){
         assert.equal(false,userReg.passWordReg(null));
+    }),
+    it('given password is empty should return false',function(){
+        assert.equal(false,userReg.passWordReg(""));
+    }),
+    it('given password is undefined should return false',function(){
+        assert.equal(false,userReg.passWordReg(undefined));
     }),
     it('given password name is correct',function(){
         assert.equal(true,userReg.passWordReg("Pranali#123"));
